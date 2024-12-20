@@ -1,7 +1,7 @@
 # JavaFx
 # What is this?
 
-This is an assignment from the "Advanced Programming Methods" course at UBB Cluj-Napoca. It demonstrates a local social network using the **Observer**, **Repository**, and **Singleton** patterns.
+This is an assignment from the "Advanced Programming Methods" course at UBB Cluj-Napoca. It demonstrates a local social network using the **Observer**, **Repository**, and **Singleton** patterns. Additionally, the application implements **pagination** both at the **GUI** and **Repository** level.
 
 ## Database
 
