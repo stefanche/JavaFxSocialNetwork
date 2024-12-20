@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.MessageController">
+   <children>
+      <VBox layoutY="142.0" prefHeight="558.0" prefWidth="192.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="193.0" text="Conversations" />
+            <ListView fx:id="conversationsListView" prefHeight="649.0" prefWidth="192.0" />
+         </children>
+      </VBox>
+      <AnchorPane fx:id="BigAnchorPane" layoutX="192.0" layoutY="142.0" prefHeight="558.0" prefWidth="507.0" style="-fx-background-color: #c4c4c4;">
+         <children>
+            <Label fx:id="convNameLabel" alignment="CENTER" layoutX="173.0" layoutY="7.0" prefHeight="17.0" prefWidth="162.0" text="Label">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="messageBoxTextField" layoutX="14.0" layoutY="519.0" prefHeight="25.0" prefWidth="427.0" promptText="write a message" />
+            <Button fx:id="sendButton" layoutX="450.0" layoutY="519.0" mnemonicParsing="false" onAction="#sendMessage" text="Send" />
+            <ScrollPane fx:id="sp_main" layoutX="8.0" layoutY="42.0" prefHeight="452.0" prefWidth="493.0">
+               <content>
+                  <VBox fx:id="vbox_messages" prefHeight="433.0" prefWidth="489.0" />
+               </content>
+            </ScrollPane>
+            <Label fx:id="replyText" layoutX="17.0" layoutY="498.0" text="Label" />
+            <Button fx:id="cancelReply" layoutX="463.0" layoutY="498.0" mnemonicParsing="false" onAction="#cancelReply" text="X">
+               <font>
+                  <Font size="8.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label fx:id="newConvoLabel" layoutX="14.0" layoutY="14.0" text="New Conversation">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="firstMessageTextField" layoutX="511.0" layoutY="46.0" prefHeight="26.0" prefWidth="151.0" promptText="write a message..." />
+      <Button fx:id="newConvoButton" layoutX="14.0" layoutY="46.0" mnemonicParsing="false" onAction="#newConvoButtonPressed" text="New conversation" />
+      <Label fx:id="writeFirstLabel" layoutX="515.0" layoutY="14.0" text="Write first message">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="sendFirstButton" layoutX="515.0" layoutY="81.0" mnemonicParsing="false" onAction="#sendFirstMessage" text="Send" />
+      <TableView fx:id="friendsTable" layoutX="160.0" layoutY="13.0" prefHeight="117.0" prefWidth="345.0">
+        <columns>
+          <TableColumn fx:id="friendsNameColumn" prefWidth="343.9999593098958" text="Name" />
+        </columns>
+      </TableView>
+      <Button fx:id="cancelButton" layoutX="14.0" layoutY="81.0" mnemonicParsing="false" onAction="#closeButtonAction" text="Cancel" />
+      <Label fx:id="errorLabel" layoutX="515.0" layoutY="106.0" text="Write first message" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
