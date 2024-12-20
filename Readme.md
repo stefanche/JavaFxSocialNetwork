@@ -25,5 +25,17 @@ The project uses a local PostgreSQL server for the database. To set it up and te
   
 [YouTube](https://youtu.be/ljC1vVDEbQ4)
 
+## Possible Improvements
+
+1. **Refactor Friendships View Repository**  
+   - Improve the repository design for the friendships view by adding relevant SQL joins to optimize data retrieval.
+
+2. **Separate Views for Different Features**  
+   - Split the views related to the search functionality, friend list, and friend requests into separate components.
+
+3. **Implement Separate Thread for Rendering Messages**  
+   - Create a separate thread dedicated to rendering certain message components.
+
+
 
  
